@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Document</title>
+  <!-- Place somewhere in the <head> of your document -->
+<link rel="stylesheet" href="css/flexslider.css" type="text/css">
+
+
+  <style>
+body {
+  /* background-color:olive; */
+
+}
+
+#olive-background::before {
+  /* content:"";
+  position:absolute;
+  width:100%;
+  height:40px;
+  background-color:olive;
+  z-index:-1; */
+}
+
+.header-container {
+  position: absolute;
+  color:white;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <h1 id="olive-background">First jQuery Plugin</h1>
+
+  <!-- Place somewhere in the <body> of your page -->
+  <div class="flexslider">
+    <ul class="slides">
+      <li>
+        <div class="header-container">
+          <h2>Welcome to my cat friendly website!</h2>
+          <h3>This website is all about sad cats and how they cope with life</h3>
+        </div>
+        <img src="img/crycat1.jpg" />
+      </li>
+      <li>
+        <img src="img/crycat2.jpg" />
+      </li>
+      <li>
+        <img src="img/crycat3.jpg" />
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- <button id="test-button"> Check jQuery is working</button> -->
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+  <script src="js/jquery.flexslider.js"></script>
+  <script>
+
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+      animation:'fade',
+      slideshow:true,
+      randomize: true,
+      touch: true,
+      keyboard: true
+
+    });
+  });
+
+</script>
+</body>
+</html>
